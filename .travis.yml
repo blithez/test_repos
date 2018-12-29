@@ -4,14 +4,13 @@ os: linux
 script:
 - chmod +x ./build.sh
 - ./build.sh
+
 deploy:
   provider: releases
   api_key:
     secure: $GH_TOKEN
   file: "main"
   skip_cleanup: true
-  on:
-    tags: true
 
 env:
   global:
