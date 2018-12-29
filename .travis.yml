@@ -1,4 +1,5 @@
 language: cpp
+sudo: required
 compiler: gcc
 os: linux
 script:
@@ -20,6 +21,7 @@ env:
    - secure: "TpW0cUbrB6lDSiEG5zJ8EHMJXhy7at8xHmaPZwvRNAC6mdDrQjS85x6N1tjycJa4VIpCRqp04xSGu20y23Fd5/PO5JzxAVhPsPkUmYkLRfKgsiQf0I47QE9jwkysTtGuiq5y6sYYSYSzl7MilIimGFb4Sv9Yv8F1N7AObuucILYVUslsF/1tl9Nhhv6XxbH/Z8ONJ9o4BWn7ikigcr4zVf8nC2Gad9XmDnKqPu4aiIvs2Dy2jCq1pbyG4Cg3J8wC3HFogzlRZCQF8P9HRZ7qCYcgsQCMeLWqnKdmM3iG04+ZVoLJhDfS3NYn7qllgYRe57QR0g0fil5rek/E/Yl9VmqGrsjqqcsszOolzK/8GoPNz/vY0L1dFtfmiWTtnQZ5hV2cK1akARE3+oXeMglsOnviqZOoyF9yjgqdEXxTp2UDxTCVBwvHn69z0cWu/1AhrOALRkYS/4pbGn85a9RoEubcXmpUVqrFq7l5jt5oLHO/migQtMtAUlAx7SCfEuoSQJEuNFDa+KryZH9hFcHX9YjtUdnWKvxrCeOsCqUhTqVBK3VYOR196821zO54tA+XsLUkuM+94gWGah4M3efh+d2mpFytKjKHMjtEUw47LTQS3Qt5pAUx3Jun1iUwgPQTZRAI45G1gUKWEK+BGjw9VrgHLdicL3RkSJEas2sPeiI="
 
 before_install:
+  - apt install g++-arm-linux-gnueabihf
   - echo -n | openssl s_client -connect https://scan.coverity.com:443 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' | sudo tee -a /etc/ssl/certs/ca-
 
 addons:
