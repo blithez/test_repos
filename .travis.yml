@@ -2,4 +2,4 @@ language: cpp
 compiler: gcc
 os: linux
 script:
-- make
+- ./build.sh
