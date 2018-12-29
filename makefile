@@ -1,6 +1,6 @@
 CC:=gcc
 CXX:=g++
-LINK_FLAGS=-Wl,--dynamic-linker=/data/data/com.termux/files/lib/ld-linux-armhf.so.3 -Wl,--rpath=/data/data/com.termux/files/lib
+LINK_FLAGS=
 CFLAGS=-std=c++11 -pthread -fPIC -DDEBUG=1 -DMEASURE_TIME=0 -DSAVE_PIC=0 -DPIC_TEST=1
 INC_DIR=-I./src -I./lib
 LIB_DIR=-L.
