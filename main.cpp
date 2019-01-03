@@ -4,7 +4,10 @@ using namespace std;
 
 int main()
 {
-    cout<<"halo"<<endl;
+    int a = 0;
+    a++;
+    cout<<"halo"<<a<<endl;
+
     return 0;
 }
 
