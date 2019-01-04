@@ -1,5 +1,4 @@
 language: cpp
-sudo: required
 compiler: gcc
 cache: ccache
 
@@ -10,18 +9,12 @@ addons:
   apt: 
     packages: 
     - gcc-arm-linux-gnueabihf 
-    - g++-arm-linux-gnueabihf 
-    - debootstrap 
-    - qemu-user-static 
-    - binfmt-support 
-    - sbuild 
-    - lzop 
-    - wget 
-    - ccache
+    - g++-arm-linux-gnueabihf
 
+before_install:
+    - ./chmod +x ./build.sh
 script:
-- chmod +x ./build.sh
-- ./build.sh
+    - ./build.sh
 
 deploy:
   provider: releases
@@ -31,3 +24,4 @@ deploy:
   skip_cleanup: true
   on: 
     branch: master
+    tag: true
