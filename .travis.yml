@@ -12,7 +12,7 @@ addons:
     - g++-arm-linux-gnueabihf
 
 before_install:
-    - ./chmod +x ./build.sh
+    - chmod +x ./build.sh
 script:
     - ./build.sh
 
