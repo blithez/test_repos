@@ -24,4 +24,4 @@ deploy:
   skip_cleanup: true
   on: 
     branch: master
-    tag: true
+    tags: true
