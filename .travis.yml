@@ -16,7 +16,6 @@ before_install:
     - chmod +x ./build.sh
 script:
     - ./build.sh
-    - ls ./
 
 deploy:
   provider: releases
