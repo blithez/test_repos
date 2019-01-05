@@ -1,6 +1,7 @@
 language: cpp
 compiler: gcc
-cache: ccache
+cache:
+    apt: true
 
 env:
   - ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf-
@@ -15,6 +16,7 @@ before_install:
     - chmod +x ./build.sh
 script:
     - ./build.sh
+    - ls ./
 
 deploy:
   provider: releases
